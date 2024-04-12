@@ -6,6 +6,7 @@ function Message({ msg, timeStamp, userLocale }) {
 	let { date, time } = dateTimeUtil(timeStamp, userLocale);
 	return (
 		
+		
 		<li className={styles.li} onClick={() => setIsOpen(!isOpen)}>
 			<time className={styles.time}>{time}</time>
 			<div className={styles.div}>
@@ -13,7 +14,9 @@ function Message({ msg, timeStamp, userLocale }) {
 				{isOpen ? <time className={styles.date}>{date}</time> : null}
 			</div>
 		</li>
+		
 	);
 }
+
 
 export default Message;
